@@ -73,11 +73,15 @@ class MigrationCommand extends Command
                     "Couldn't create migration.\n Check the write permissions".
                     " within the database/migrations directory."
                 );
+                
+                return 10;
             }
 
             $this->line('');
 
         }
+        
+        return 0;
     }
 
     /**
